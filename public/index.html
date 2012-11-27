@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Cash Register</title>
+    <link rel="stylesheet" href="css/app.css">
+
+    <script src="js/frameworks/jquery-1.5.2.js"></script>
+    <script src="js/frameworks/handlebars-0.9.0.pre.5.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/timesheet.js"></script>
+  </head>
+
+  <body>
+
+    <script id="timesheet-template" type="text/x-handlebars-template">
+    {{#each dishes}}
+    <li>
+      <span class="time">{{time}}</span>
+      <span class="title">{{title}}</span>
+      <span class="description">{{description}}</span>
+    </li>
+    {{/each}}
+    <li class="total">
+      <span class="title">Total</span>
+      <span class="time">{{time}}</span>
+    </li>
+    </script>
+
+    <div id="wrap">
+      
+      <h1 id="">Timesheet</h1>
+      
+      <ul id="timesheet"></ul>
+      
+      <form id="entry_form">
+        <input type="text" id="entry" />
+      </form>
+
+      <p class="note">
+        Example: <em class="note">2.5h Coca Cola - Change cc-red to green</em>
+      </p>
+      
+    </div>
+
+  </body>
+</html>
